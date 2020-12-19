@@ -66563,7 +66563,7 @@ function Show() {
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var r = document.getElementById('useremail').value;
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:8000/api/data?id=".concat(r)).then(function (e) {
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost/api/data?id=".concat(r)).then(function (e) {
       return setData(e.data);
     })["catch"](function (err) {
       return console.log('error');
@@ -66576,7 +66576,7 @@ function Show() {
     if (name == '' || price == '') {
       return 0;
     } else {
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:8000/api/data', {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost/api/data', {
         name: name,
         price: price,
         userid: userid
@@ -66592,7 +66592,7 @@ function Show() {
   };
 
   var itemdelete = function itemdelete(id) {
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("http://localhost:8000/api/data/".concat(id));
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("http://localhost/api/data/".concat(id));
     setChange("".concat(id, " got deleted"));
   };
 

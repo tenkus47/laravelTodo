@@ -17,7 +17,7 @@ function Show() {
     useEffect(()=>{
         var r=document.getElementById('useremail').value;
         axios.get(
-            `http://localhost:8000/api/data?id=${r}`
+            `http://localhost/api/data?id=${r}`
         ).then(e=>setData(e.data)
             ).catch(err=>console.log('error'));  
             
@@ -29,7 +29,7 @@ function Show() {
           return 0;
         }
         else{
-            axios.post('http://localhost:8000/api/data',{name:name,price:price,userid:userid}).then(e=>{ setChange('ds'+name+price);
+            axios.post('http://localhost/api/data',{name:name,price:price,userid:userid}).then(e=>{ setChange('ds'+name+price);
             setName('');
             setPrice('');
             return('success');
@@ -40,7 +40,7 @@ function Show() {
             
     }
     const itemdelete=(id)=>{
-      axios.delete(`http://localhost:8000/api/data/${id}`);
+      axios.delete(`http://localhost/api/data/${id}`);
       setChange(`${id} got deleted`);
     }
     const itemname=(e)=>{
