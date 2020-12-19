@@ -1,0 +1,16 @@
+table{
+   margin:0 auto;
+   width:80%;
+}
+.btn{
+    width:90px;
+}
+thead{
+    height: 60px;
+}
+td{
+    text-align: center;
+}
+.userform{
+    display: none;
+}
