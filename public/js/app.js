@@ -66511,8 +66511,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -66524,7 +66522,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -66563,7 +66560,7 @@ function Show() {
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var r = document.getElementById('useremail').value;
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost/api/data?id=".concat(r)).then(function (e) {
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:8000/api/data?id=".concat(r)).then(function (e) {
       return setData(e.data);
     })["catch"](function (err) {
       return console.log('error');
@@ -66576,7 +66573,7 @@ function Show() {
     if (name == '' || price == '') {
       return 0;
     } else {
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost/api/data', {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://localhost:8000/api/data', {
         name: name,
         price: price,
         userid: userid
@@ -66592,7 +66589,7 @@ function Show() {
   };
 
   var itemdelete = function itemdelete(id) {
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("http://localhost/api/data/".concat(id));
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("http://localhost:8000/api/data/".concat(id));
     setChange("".concat(id, " got deleted"));
   };
 
